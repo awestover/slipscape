@@ -1,0 +1,4 @@
+class Cell extends Blob {
+
+}
+
