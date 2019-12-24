@@ -9,6 +9,7 @@ class Blob {
     // update center position
     this.setPos(x,y,z);
     this.vel = new THREE.Vector3(0,0,0);
+    this.flying = false;
   }
 
   setPos(x,y,z){

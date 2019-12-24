@@ -1,7 +1,9 @@
 class Agent extends Blob {
   move(dx, dy, dz){
     this.mesh.position.x += dx;
-    this.mesh.position.y += dy;
+    if(!this.flying){
+      this.mesh.position.y += dy;
+    }
     this.mesh.position.z += dz;
   }
   accelX(ax){
@@ -75,7 +77,7 @@ class Agent extends Blob {
               }
             }
             else if (yCollision == "this in other") {
-              console.log("in other");
+              // console.log("in other");
               // this.move(2*(Math.round(this.getX())-this.getX()), 0, 2*(Math.round(this.getZ())-this.getZ()));
               if(xMove){
                 let dxcms = Math.sign(this.getX() - game_grid[i].getX())*wallBumpImpulse;
