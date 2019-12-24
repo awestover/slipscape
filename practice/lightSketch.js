@@ -128,10 +128,9 @@ function animate() {
   camera.position.y = playerPos.y;
   camera.position.z = playerPos.z;
 
-  // for(let i in ptLights){
-  //   alekRandomWalk(i);
-  // }
-  alekRandomWalk(0);
+  for(let i in ptLights){
+    alekRandomWalk(i);
+  }
 
 	renderer.render( scene, camera );
 }
